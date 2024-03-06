@@ -9,12 +9,14 @@ html {
 }
 
 .page {
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  inline-size: 1200px;
+  min-inline-size: 1200px;
   block-size: 100%;
 }
 
@@ -52,8 +54,6 @@ ol {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin: 133px 0px;
-  padding-inline-start: 60px;
   inline-size: 1140px;
 }
 
@@ -146,7 +146,7 @@ label span {
   block-size: 19px;
 }
 
-.search-form__checkbox:checked+.search-form__pseudo-checkbox::before {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   content: "";
   text-decoration: none;
   background-color: #fff;
@@ -213,8 +213,6 @@ button:active {
 }
 
 .content__list {
-  /* display: flex; */
-  /* flex-direction: column; */
   position: relative;
   display: block;
   margin-block-start: 26px;
