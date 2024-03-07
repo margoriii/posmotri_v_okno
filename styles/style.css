@@ -44,7 +44,7 @@ ol {
   overflow: hidden;
   clip: rect(0 0 0 0);
   inline-size: 1px;
-  block-size: 1px;
+  block-size: 1px; 
   clip-path: inset(50%);
   white-space: nowrap;
 }
@@ -55,6 +55,8 @@ ol {
   align-items: center;
   gap: 30px;
   inline-size: 1140px;
+  padding-inline-end: 15px;
+  padding-block-end: 10px;
 }
 
 .result {
@@ -71,6 +73,7 @@ ol {
 .result__video {
   inline-size: 100%;
   max-block-size: 386px;
+  object-fit: fill;
 }
 
 .search-form {
@@ -129,8 +132,9 @@ fieldset {
 }
 
 label span {
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 
 .search-form__pseudo-checkbox {
@@ -156,16 +160,12 @@ label span {
 
 .search-form__label-text {
   display: inline-block;
-  margin: 15;
 }
 
 button {
   border: none;
-  border-inline-start: 1px solid #fff;
-  border-inline-end: 1px solid #fff;
-  border-block-start: 1px solid #fff;
-  border-block-end: 1px solid #fff;
-  color: #fff;
+  border: 1px solid currentColor;
+  color: inherit;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -212,15 +212,19 @@ button:active {
   block-size: 34px;
 }
 
+.content__details {
+  min-inline-size: 399px;
+}
+
 .content__list {
   position: relative;
   display: block;
   margin-block-start: 26px;
-  overflow: scroll;
+  overflow: auto;
   block-size: 298px;
 }
 
-.content__list-item {
+.content__list-item:not(:last-of-type) {
   margin-block-end: 30px;
 }
 
@@ -232,6 +236,7 @@ button:active {
 .content__video-card-thumbnail {
   inline-size: 194px;
   block-size: 103px;
+  object-fit: fill;
 }
 
 .content__video-card-description-container {
@@ -303,6 +308,10 @@ button:active {
   letter-spacing: 0em;
   text-align: left;
   text-transform: uppercase;
+  max-inline-size: 200px;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -312,4 +321,5 @@ button:active {
   line-height: 16px;
   letter-spacing: 0em;
   text-align: left;
+  max-inline-size: 200px;
 }
