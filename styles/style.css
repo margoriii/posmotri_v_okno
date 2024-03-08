@@ -16,7 +16,6 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  min-inline-size: 1200px;
   block-size: 100%;
 }
 
@@ -44,26 +43,23 @@ ol {
   overflow: hidden;
   clip: rect(0 0 0 0);
   inline-size: 1px;
-  block-size: 1px; 
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
 }
 
 .content {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   gap: 30px;
   inline-size: 1140px;
-  padding-inline-end: 15px;
-  padding-block-end: 10px;
 }
 
 .result {
   display: flex;
   flex-direction: column;
-  gap: 9px;
-  padding-block-start: 78px;
+  gap: 11px;
+  padding-block-start: 65px;
 }
 
 .result__video-container {
@@ -71,9 +67,9 @@ ol {
 }
 
 .result__video {
+  object-fit: cover;
   inline-size: 100%;
   max-block-size: 386px;
-  object-fit: fill;
 }
 
 .search-form {
@@ -134,7 +130,7 @@ fieldset {
 label span {
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 .search-form__pseudo-checkbox {
@@ -213,13 +209,16 @@ button:active {
 }
 
 .content__details {
-  min-inline-size: 399px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  inline-size: 100%;
 }
 
 .content__list {
   position: relative;
   display: block;
-  margin-block-start: 26px;
+  margin-block-start: 15px;
   overflow: auto;
   block-size: 298px;
 }
@@ -234,9 +233,9 @@ button:active {
 }
 
 .content__video-card-thumbnail {
+  object-fit: cover;
   inline-size: 194px;
   block-size: 103px;
-  object-fit: fill;
 }
 
 .content__video-card-description-container {
@@ -271,7 +270,7 @@ button:active {
 
 .content__card-link {
   display: block;
-  margin: 5px;
+  margin: 4px;
   color: #fff;
   text-decoration: none;
 }
@@ -301,6 +300,7 @@ button:active {
 }
 
 .content__video-card-title {
+  overflow: hidden;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
@@ -308,10 +308,9 @@ button:active {
   letter-spacing: 0em;
   text-align: left;
   text-transform: uppercase;
+  text-overflow: ellipsis;
   max-inline-size: 200px;
-  text-overflow: ellipsis; 
-  white-space: nowrap; 
-  overflow: hidden;
+  white-space: nowrap;
 }
 
 .content__video-card-description {
