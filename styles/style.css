@@ -53,6 +53,7 @@ ol {
   justify-content: space-between;
   gap: 30px;
   inline-size: 1140px;
+  align-items: flex-end;
 }
 
 .result {
@@ -277,12 +278,12 @@ button:active {
 
 .content__card-link:hover .content__video-card-title {
   text-decoration: underline solid #fff 2px;
-  text-underline-offset: 5px;
+  text-underline-offset: 2px;
 }
 
 .content__card-link:hover .content__video-card-description {
   text-decoration: underline solid #fff 1px;
-  text-underline-offset: 3px;
+  text-underline-offset: 2px;
 }
 
 .content__card-link_current,
